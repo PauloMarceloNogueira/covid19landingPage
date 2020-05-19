@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;400;600&display=swap');
+*, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Jost', sans-serif;
+  overflow-x: hidden;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  background:linear-gradient(#FFCFCF, #fff);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+
+section {
+  overflow: hidden;
+  /* padding: 32px; */
+}
+
+.home .content {
+  width: 30%;
+  padding-left: 32px;
+}
+
+@media (max-width: 660px) {
+  .home {
+    flex-wrap: wrap;
+    height: 100%;
+  }
+  .home .content {
+    height: 100%;
+    width: 100%;
+    padding-left: 32px;
+    order: 2;
+  }
+
+  .home .image {
+    width: 100%;
+    order: 1;
+  }
+}
+
+.home .content h4 {
+  transition: 3s linear;
+  color: #FA5652;
+  font-size: 24px;
+}
+
+.home .content h1 {
+  color: #035755;
+  font-size: 40px;
+}
+
+.home .content p {
+  color: #4B4F51;
+  font-size: 16px;
+}
+
+.home .content a {
+  margin-top: 54px;
+  background: #FB4C47;
+  width: 250px;
+  height: 80px;
+  display: flex;
+  border-radius: 64px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+
+
+.home .image img {
+  width: 100%;
+}
+
+/* ================================================== */
+
+.wathIs {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 32px;
+  position: relative;
+}
+
+.coronaBg {
+  opacity: 0;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.wathIs .coronaBg {
+  width: 10%;
+  left: 95%;
+  position: absolute;
+  top: 70%;
+}
+
+.wathIs .coronaBg:nth-of-type(2) {
+  width: 5%;
+  left: 87%;
+  position: absolute;
+  top: 87%;
+}
+
+.wathIs .img {
+  transform: rotate(40deg);
+  width: 60%;
+}
+.wathIs .img img{
+  width: 80%;
+}
+
+.wathIs .content {
+  width: 30%;
+}
+
+.content h4 {
+  color: #FA5652;
+  font-size: 24px;
+}
+
+.content h1 {
+  color: #035755;
+  font-size: 40px;
+}
+
+.content p {
+  color: #4B4F51;
+  font-size: 16px;
+}
+
+.content a {
+  margin-top: 54px;
+  background: #FFC8CA;
+  width: 250px;
+  height: 80px;
+  display: flex;
+  border-radius: 64px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #FA5652;
+  font-weight: bold;
+  font-size: 24px;
+  animation: pulse 1.5s infinite;
+}
+
+
+@media (max-width: 660px) {
+  .wathIs {
+    flex-wrap: wrap;
+  }
+  .wathIs .content {
+    width: 100%;
+    padding-left: 32px;
+    order: 2;
+  }
+
+  .wathIs .img {
+    width: 100%;
+    order: 1;
+  }
+}
+/* ================================================== */
+.contagions {
+  padding-top: 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align  : center;
+  position: relative;
+}
+
+.contagions .coronaBg {
+  width: 10%;
+  left: 5%;
+  position: absolute;
+  top: 70%;
+  opacity: 0;
+}
+
+.contagions .content {
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
+.contagions .content .boxes {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.contagions .boxes ul {
+  /* background:linear-gradient(to top, #FFF, #EAEAEA, #FFF);
+  background:linear-gradient(to left, #FFF, #EAEAEA, #FFF); */
+  margin-top: 32px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+  height: 400px;
+}
+
+.contagions .boxes ul li{
+  padding-left: 18px;
+  padding-right: 18px;
+  background: #FFF;
+  width: calc(100% / 4);
+  height: 365px;
+  margin-left: 16px;
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: 0px -1px 15px 7px rgba(234,234,234,1);
+  -moz-box-shadow: 0px -1px 15px 7px rgba(234,234,234,1);
+  box-shadow: 0px -1px 15px 7px rgba(234,234,234,1);
+  
+}
+
+.contagions .boxes ul li::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  background: #FA5652;
+  height: 3px;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: all 1s;
+  transform-origin: center;
+}
+
+.contagions .boxes ul li::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  background: #FA5652;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 1s;
+  transform-origin: center;
+}
+
+.contagions .boxes ul li:hover {
+  -webkit-box-shadow: 0px -1px 15px 7px rgba(234,234,234,1);
+-moz-box-shadow: 0px -1px 15px 7px rgba(234,234,234,1);
+box-shadow: 0px -1px 15px 7px rgba(234,234,234,1);
+}
+
+.contagions .boxes ul li:hover::after, .contagions .boxes ul li:hover::before{
+  transform: scaleX(1);
+}
+.contagions .boxes ul li img {
+  width: auto;
+  height: 249px;
+}
+
+@media (max-width: 660px) {
+  .contagions {
+    flex-wrap: wrap;
+  }
+
+  .contagions .boxes ul {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .contagions .boxes ul li {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 24px;
+    box-shadow: none;
+  }
+
+  .contagions .content p {
+    padding-bottom: 18px;
+  }
+
+  .wathIs .content {
+    width: 100%;
+    padding-left: 32px;
+    order: 2;
+  }
+
+  .wathIs .img {
+    width: 100%;
+    order: 1;
+  }
+}
+
+/* ================================================== */
+
+.symtomps {
+  /* background:linear-gradient(to bottom, #E5E5E5, #fff); */
+  padding-top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align  : center;
+}
+
+.symtomps .content {
+  padding-right: 32px;
+  padding-left: 32px;
+  width: 100%;
+}
+
+.symtomps .content .girl {
+  width: 100%;
+}
+
+/* ================================================== */
+.whatShould {
+  width: 100%;
+  height: 100vh;
+  background: #FFF
+}
+.reports  {
+  width: 100%;
+  height: 100vh;
+  background: gray
+}
+
+/* ANIMATIONS */
+
+
+.home .content h4 {
+  position: relative;
+  
+}
+
+.home .content h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #FA5652;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(1);
+  transition: 0.5s;
+  transform-origin: right;
+  transition-delay: 0.5s;
+}
+
+.home[data-scroll="in"] .content h4::before {
+  transform: scaleX(0);
+}
+
+section[data-scroll="in"] .coronaBg {
+  opacity: 1;
+}
