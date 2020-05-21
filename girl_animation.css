@@ -3,11 +3,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 530px;
   cursor: pointer;
 }
 .girl svg{
   max-width: 800px;
+  height: auto;
+}
+
+@media (max-width: 700px) {
+  .girl {
+    height: 250px;
+  }
+
+  .girl svg {
+    padding: 18px;
+  }
 }
 
 .line, .dot, .letter, .circle {
